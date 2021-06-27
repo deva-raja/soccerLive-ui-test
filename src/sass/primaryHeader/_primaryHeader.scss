@@ -1,35 +1,134 @@
+/*****************
+placeholder css
+******************/
+::placeholder {
+   color: $white;
+   opacity: 1;
+   font-weight: 400;
+   font-size: 1.4em;
+}
+
+:-ms-input-placeholder {
+   /* Internet Explorer 10-11 */
+   color: $white;
+   font-weight: 900;
+}
+
+::-ms-input-placeholder {
+   /* Microsoft Edge */
+   color: $white;
+   font-weight: 900;
+}
+
+/*****************
+actual css
+******************/
 .primary-header-container {
    background-color: $bg-primary;
-   padding: 1em 0 0.5em;
+   padding: 1.8em 0 1.4em;
    color: $white;
 }
 
 .primary-header {
    display: grid;
-   grid-template-columns: repeat(3, 1fr);
+   grid-template-columns: repeat(12, 1fr);
    grid-template-rows: repeat(1, 1fr);
    gap: 1rem;
    align-items: center;
-   &__search-container {
-      background-color: $blur-bg;
-      border-radius: 0.3rem;
-      padding: 0.5em;
+
+   .hamburger {
+      display: none;
+   }
+
+   &__logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      grid-column: 1 / span 2;
+      width: 80%;
+   }
+
+   &__span--large {
+      font-weight: 900;
+      font-size: 2rem;
+   }
+
+   &__span--small {
+      font-size: 1.1rem;
+   }
+
+   &__search-input-container {
+      grid-column: 4 / span 5;
       display: flex;
       align-items: center;
    }
+
+   &__search-input {
+      border: none;
+      padding: 1.2em 3.8em;
+      border-radius: 0.6rem;
+      background-color: $blur-bg;
+      color: $white;
+      width: 100%;
+      &:last-of-type {
+         width: 100%;
+      }
+   }
+
    &__notification-container {
       background-color: $blur-bg;
-      border-radius: 2rem 3rem;
-      padding: 0.5em 1em;
-      width: 10rem;
+      border-radius: 2rem;
+      padding: 0.8em 1.6em;
       display: flex;
       align-items: center;
+      grid-column: -3 / span 2;
+      justify-self: end;
    }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
+   html {
+      font-size: 13px;
+   }
+
    .primary-header {
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(2, 1fr);
+
+      .hamburger {
+         display: block;
+         grid-column: -2 / span 1;
+         grid-row: 1/2;
+         justify-self: flex-end;
+      }
+
+      &__logo-container {
+         grid-column: 1 / span 2;
+         grid-row: 1/2;
+         width: 50%;
+      }
+
+      &__search-input-container {
+         grid-column: 1 / -1;
+         grid-row: 2/3;
+      }
+
+      &__notification-container {
+         grid-column: 2 / span 2;
+         grid-row: 1/2;
+         justify-self: flex-end;
+      }
+   }
+}
+
+@media (max-width: 550px) {
+   html {
+      font-size: 10px;
+   }
+   .primary-header {
+      &__notification-container {
+         position: relative;
+         left: 2rem;
+      }
    }
 }

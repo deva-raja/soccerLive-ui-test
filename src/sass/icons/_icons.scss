@@ -1,13 +1,16 @@
 .soccerlive-icon {
    width: 2.5rem;
    height: 2.5rem;
+   margin-right: 0.5em;
 }
 
 .search-icon {
    color: $white;
-   width: 1.3rem;
-   height: 1.3rem;
+   width: 2rem;
+   height: 2rem;
    margin-right: 0.5em;
+   position: relative;
+   left: 3em;
 }
 
 .bell-icon {
@@ -17,13 +20,6 @@
 }
 
 .hamburger-icon {
-   display: none;
    width: 2.3rem;
    height: 2.3rem;
-}
-
-@media (max-width: 600px) {
-   .hamburger-icon {
-      display: block;
-   }
 }

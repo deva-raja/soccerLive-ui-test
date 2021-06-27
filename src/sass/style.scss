@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
 
-@import './main/resets';
+@import 'main/resets';
 @import 'main/variables';
-@import 'primaryHeader/primaryHeader';
 @import 'icons/icons';
+@import 'primaryHeader/primaryHeader';
 
 .App {
    background-color: $bg-secondary;
