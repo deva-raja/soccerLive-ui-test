@@ -52,15 +52,36 @@
   2.overlay of secondary header
 *********************************/
 .secondary-header-container--active {
-   z-index: 2;
    .secondary-header {
       &__list {
+         height: 90vh;
+         margin: 8vh 0 2vh;
+         text-align: center;
          display: flex;
          flex-direction: column;
+         align-items: center;
+         justify-content: space-evenly;
       }
+
       &__items {
-         font-size: 1.5rem;
-         color: $white;
+         font-size: 2rem;
+         margin-bottom: 1.4em;
+         color: $text-secondary;
+
+         &:nth-child(1) {
+            position: relative;
+            color: $bg-primary;
+            &::before {
+               content: '';
+               position: absolute;
+               background: $bg-primary;
+               height: 0.35rem;
+               width: 100vw;
+               border-radius: 1em;
+               right: -6.8em;
+               top: 1.5em;
+            }
+         }
       }
    }
 }
@@ -84,8 +105,6 @@
 
 @media (max-width: 750px) {
    .secondary-header-container {
-      .secondary-header {
-         display: none;
-      }
+      display: none;
    }
 }

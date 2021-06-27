@@ -58,9 +58,12 @@ primary header icons end
    overlay icons start
 **************************/
 .close-icon {
-  color: #fff;
+  color: #161b46;
   width: 2.3rem;
   height: 2.3rem;
+  position: fixed;
+  right: 2em;
+  top: 2.7em;
 }
 
 .landing-page {
@@ -323,11 +326,10 @@ primary header icons end
 /*******************************
   2.overlay of secondary header
 *********************************/
-.secondary-header-container--active {
-  z-index: 2;
-}
-
 .secondary-header-container--active .secondary-header__list {
+  height: 90vh;
+  margin: 8vh 0 2vh;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -335,11 +337,34 @@ primary header icons end
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .secondary-header-container--active .secondary-header__items {
-  font-size: 1.5rem;
-  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1.4em;
+  color: #767379;
+}
+
+.secondary-header-container--active .secondary-header__items:nth-child(1) {
+  position: relative;
+  color: #161b46;
+}
+
+.secondary-header-container--active .secondary-header__items:nth-child(1)::before {
+  content: '';
+  position: absolute;
+  background: #161b46;
+  height: 0.35rem;
+  width: 100vw;
+  border-radius: 1em;
+  right: -6.8em;
+  top: 1.5em;
 }
 
 /*************************
@@ -355,7 +380,7 @@ primary header icons end
 }
 
 @media (max-width: 750px) {
-  .secondary-header-container .secondary-header {
+  .secondary-header-container {
     display: none;
   }
 }
@@ -377,14 +402,15 @@ primary header icons end
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   width: 100vw;
   height: 100vh;
-  background-color: white;
-  z-index: 1;
-  background-color: #161b46;
+  z-index: 999;
+  background-color: #f6f6f6;
 }
 
 .d-col {

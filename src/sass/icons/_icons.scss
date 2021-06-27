@@ -34,7 +34,10 @@ primary header icons end
    overlay icons start
 **************************/
 .close-icon {
-   color: $white;
+   color: $bg-primary;
    width: 2.3rem;
    height: 2.3rem;
+   position: fixed;
+   right: 2em;
+   top: 2.7em;
 }

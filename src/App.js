@@ -6,6 +6,10 @@ import LandingPage from './pages/LandingPage';
 
 // import { FaPlay } from 'react-icons';
 
+// icons
+// import pitch from '../icons/pitch.svg';
+// import stadium from '../icons/stadium.svg';
+
 function App() {
    return (
       <div className='App'>

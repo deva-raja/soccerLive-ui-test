@@ -12,7 +12,7 @@ function OverLayComponent({ active, setActive }) {
          {active && (
             <div className='overlay'>
                <FiX className='close-icon' onClick={handleClick} />
-               <SecondaryHeaderComponent />
+               <SecondaryHeaderComponent active={active} />
             </div>
          )}
       </>
