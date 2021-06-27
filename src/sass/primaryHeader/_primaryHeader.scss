@@ -1,0 +1,35 @@
+.primary-header-container {
+   background-color: $bg-primary;
+   padding: 1em 0 0.5em;
+   color: $white;
+}
+
+.primary-header {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(1, 1fr);
+   gap: 1rem;
+   align-items: center;
+   &__search-container {
+      background-color: $blur-bg;
+      border-radius: 0.3rem;
+      padding: 0.5em;
+      display: flex;
+      align-items: center;
+   }
+   &__notification-container {
+      background-color: $blur-bg;
+      border-radius: 2rem 3rem;
+      padding: 0.5em 1em;
+      width: 10rem;
+      display: flex;
+      align-items: center;
+   }
+}
+
+@media (max-width: 600px) {
+   .primary-header {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+   }
+}
