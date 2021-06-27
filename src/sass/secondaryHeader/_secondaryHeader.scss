@@ -1,0 +1,91 @@
+/*************************
+   1. secondary header
+   2. secondary header overlay
+**************************/
+
+// 1. secondary header
+.secondary-header-container {
+   grid-row: 2/3;
+   background-color: $white;
+   padding: 1.3em 0;
+
+   .secondary-header {
+      &__list {
+         display: flex;
+         gap: 1em;
+         width: 86%;
+         justify-content: space-between;
+         align-items: center;
+         &:hover {
+            cursor: pointer;
+         }
+      }
+
+      &__items {
+         font-size: 1.5rem;
+         color: $text-primary;
+         font-weight: normal;
+
+         &:nth-child(1) {
+            color: $bg-primary;
+            font-weight: 600;
+            position: relative;
+            padding-right: 1em;
+            padding-left: 1.3em;
+
+            &::before {
+               content: '';
+               background: $bg-primary;
+               height: 0.35rem;
+               width: 9.68rem;
+               position: absolute;
+               top: 150%;
+               left: -0%;
+               border-radius: 1em;
+            }
+         }
+      }
+   }
+}
+
+/*******************************
+  2.overlay of secondary header
+*********************************/
+.secondary-header-container--active {
+   z-index: 2;
+   .secondary-header {
+      &__list {
+         display: flex;
+         flex-direction: column;
+      }
+      &__items {
+         font-size: 1.5rem;
+         color: $white;
+      }
+   }
+}
+
+/*************************
+      media queries 
+**************************/
+
+@media (max-width: 1200px) {
+   html {
+      font-size: 11px;
+   }
+   .secondary-header-container {
+      .secondary-header {
+         &__list {
+            width: 90%;
+         }
+      }
+   }
+}
+
+@media (max-width: 750px) {
+   .secondary-header-container {
+      .secondary-header {
+         display: none;
+      }
+   }
+}

@@ -1,6 +1,6 @@
-/*****************
-placeholder css
-******************/
+/************************
+  input placeholder css
+*************************/
 ::placeholder {
    color: $white;
    opacity: 1;
@@ -21,12 +21,13 @@ placeholder css
 }
 
 /*****************
-actual css
+   actual css
 ******************/
 .primary-header-container {
    background-color: $bg-primary;
    padding: 1.8em 0 1.4em;
    color: $white;
+   grid-row: 1/2;
 }
 
 .primary-header {
@@ -43,14 +44,13 @@ actual css
    &__logo-container {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       grid-column: 1 / span 2;
       width: 80%;
    }
 
    &__span--large {
-      font-weight: 900;
-      font-size: 2rem;
+      font-weight: 700;
+      font-size: 1.75rem;
    }
 
    &__span--small {
@@ -83,8 +83,13 @@ actual css
       align-items: center;
       grid-column: -3 / span 2;
       justify-self: end;
+      cursor: pointer;
    }
 }
+
+/*************************
+      media queries
+**************************/
 
 @media (max-width: 750px) {
    html {
@@ -130,5 +135,8 @@ actual css
          position: relative;
          left: 2rem;
       }
+   }
+   &__search-input {
+      padding: 1.2em 1em;
    }
 }
