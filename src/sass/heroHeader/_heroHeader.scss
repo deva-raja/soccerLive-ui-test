@@ -1,0 +1,42 @@
+.hero-header-container {
+   grid-row: 3/4;
+   background-color: $white;
+   border-radius: 0.6rem;
+   margin-bottom: 1.2em;
+}
+
+.hero-header {
+   display: flex;
+   padding: 0.8em 1.3em;
+   align-items: center;
+   justify-content: flex-start;
+
+   // provide left spacing for all elements
+   & > * {
+      margin-left: 0.4em;
+   }
+
+   &__text-large {
+      font-weight: 600;
+      color: $text-highlight;
+   }
+
+   &__text-small {
+      font-weight: 600;
+      color: $text-blur;
+   }
+}
+
+/*************************
+      media queries 
+**************************/
+@media (max-width: 550px) {
+   .hero-header-container {
+      grid-row: 2/3;
+   }
+   .hero-header {
+      font-size: 0.85rem;
+      display: flex;
+      padding: 1em 1em;
+   }
+}

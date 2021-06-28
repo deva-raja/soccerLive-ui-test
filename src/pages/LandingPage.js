@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import OverLayComponent from '../components/OverLayComponent';
-import PrimaryHeaderComponent from '../components/PrimaryHeaderComponent';
-import SecondaryHeaderComponent from '../components/SecondaryHeaderComponent';
+import PrimaryHeaderComponent from '../components/HeaderSection/PrimaryHeaderComponent';
+import SecondaryHeaderComponent from '../components/HeaderSection/SecondaryHeaderComponent';
+import HeroContainerComponent from '../components/HeroSection/HeroContainerComponent';
+import HeroHeaderComponent from '../components/HeroSection/HeroHeaderComponent';
+import OverLayComponent from '../components/OverlaySection/OverLayComponent';
 
 function LandingPage() {
    const [active, setActive] = useState(false);
@@ -11,6 +13,8 @@ function LandingPage() {
          <div className='landing-page'>
             <PrimaryHeaderComponent setActive={setActive} />
             <SecondaryHeaderComponent />
+            <HeroHeaderComponent />
+            <HeroContainerComponent />
          </div>
       </>
    );

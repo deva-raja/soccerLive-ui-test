@@ -1,8 +1,8 @@
 import React from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { FiMenu } from 'react-icons/fi';
-import Bell from '../icons/bell.svg';
-import SoccerLive from '../icons/soccerlive.svg';
+import Bell from '../../icons/bell.svg';
+import SoccerLive from '../../icons/soccerlive.svg';
 
 function PrimaryHeaderComponent({ setActive }) {
    const handleClick = () => {

@@ -2,21 +2,18 @@
 
 @import 'main/normalize';
 @import 'main/variables';
-@import 'icons/icons';
+@import 'containerStyling/container';
+@import 'iconsStyling/icons';
 @import 'landingPage/landingPage';
 @import 'primaryHeader/primaryHeader';
 @import 'secondaryHeader/secondaryHeader';
+@import 'heroHeader/heroHeader';
+@import 'Hero/heroContainer';
 
 .App {
    background-color: $bg-secondary;
    width: 100%;
    height: 100%;
-}
-
-.container {
-   width: 90%;
-   margin: 0 auto;
-   max-width: 1650px;
 }
 
 .selected {

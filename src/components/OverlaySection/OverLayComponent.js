@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiX } from 'react-icons/fi';
-import SecondaryHeaderComponent from './SecondaryHeaderComponent';
+import SecondaryHeaderComponent from '../HeaderSection/SecondaryHeaderComponent';
 
 function OverLayComponent({ active, setActive }) {
    const handleClick = () => {
