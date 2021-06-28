@@ -1,15 +1,5 @@
 import React from 'react';
-
-const sportsArray = [
-   'Football',
-   'Tennis',
-   'Baseball',
-   'Hockey',
-   'Handball',
-   'Cricket',
-   'Volleyball',
-   'Table Tennis',
-];
+import sportsArray from '../../datas/sportsArray';
 
 function SecondaryHeaderComponent({ active }) {
    return (

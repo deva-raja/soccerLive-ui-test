@@ -3,7 +3,9 @@ import PrimaryHeaderComponent from '../components/HeaderSection/PrimaryHeaderCom
 import SecondaryHeaderComponent from '../components/HeaderSection/SecondaryHeaderComponent';
 import HeroContainerComponent from '../components/HeroSection/HeroContainerComponent';
 import HeroHeaderComponent from '../components/HeroSection/HeroHeaderComponent';
+import MenuComponent from '../components/MenuSection/MenuComponent';
 import OverLayComponent from '../components/OverlaySection/OverLayComponent';
+import StatisticsContainerComponent from '../components/StatsSection/StatsContainerComponent';
 
 function LandingPage() {
    const [active, setActive] = useState(false);
@@ -15,6 +17,8 @@ function LandingPage() {
             <SecondaryHeaderComponent />
             <HeroHeaderComponent />
             <HeroContainerComponent />
+            <MenuComponent />
+            <StatisticsContainerComponent />
          </div>
       </>
    );

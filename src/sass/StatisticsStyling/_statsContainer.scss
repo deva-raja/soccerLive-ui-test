@@ -1,0 +1,16 @@
+@import 'statsTeam';
+@import 'statsHeader';
+@import 'statsTeamPrimary';
+@import 'statsTeamSecondary';
+@import 'statsPlayer';
+
+.stats-container {
+   grid-row: 6/7;
+   border-radius: 0.6rem;
+   margin-bottom: 1.3125em;
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   grid-template-rows: repeat(3, auto);
+   column-gap: 0.75rem;
+   row-gap: 1.125rem;
+}

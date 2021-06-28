@@ -5,9 +5,16 @@
    display: grid;
    grid-template-columns: repeat(12, 1fr);
    background-color: $white;
-   padding: 1em;
-   margin-bottom: 1em;
-   border: 2px solid black;
+   padding: 1.5em;
+   margin-bottom: 1.75em;
    grid-row: 4/5;
    gap: 0.75rem;
+   border-radius: 0.6rem;
+}
+
+@media (max-width: '990px') {
+   .hero-container {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto 1fr;
+   }
 }

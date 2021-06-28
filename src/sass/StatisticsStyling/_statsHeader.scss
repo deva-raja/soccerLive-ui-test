@@ -1,0 +1,11 @@
+.stats-header-container {
+   grid-column: 1 / 5;
+   grid-row: 1 / 2;
+   background-color: $white;
+   &__header {
+      font-size: 1.375rem;
+      color: $bg-primary;
+      padding: 0.7em;
+      font-weight: 600;
+   }
+}

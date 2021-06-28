@@ -9,6 +9,8 @@
 @import 'secondaryHeader/secondaryHeader';
 @import 'heroHeader/heroHeader';
 @import 'Hero/heroContainer';
+@import 'MenuStyling/menu';
+@import 'StatisticsStyling/statsContainer';
 
 .App {
    background-color: $bg-secondary;
@@ -36,4 +38,8 @@
 // create flex column
 .d-col {
    flex-direction: column;
+}
+
+.bdr-radius {
+   border-radius: 0.6rem;
 }

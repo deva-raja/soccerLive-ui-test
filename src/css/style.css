@@ -468,6 +468,10 @@ primary header icons end
   }
 }
 
+/************************
+     1.basic styling section
+     2.win percentage section 
+***************************/
 .hero-primary-container {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
@@ -475,9 +479,12 @@ primary header icons end
 }
 
 .hero-primary {
-  width: 90%;
-  padding: 1em;
+  width: 92%;
+  padding: 2em;
   text-align: center;
+  /************************
+     2.win percentage section 
+***************************/
 }
 
 .hero-primary__match-container {
@@ -499,13 +506,6 @@ primary header icons end
   color: #161b46;
 }
 
-.hero-primary__win-text {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #161b46;
-  margin-bottom: 2em;
-}
-
 .hero-primary__team {
   color: #161b46;
   font-size: 1.2rem;
@@ -518,6 +518,13 @@ primary header icons end
   position: relative;
   top: 0.5em;
   font-weight: 600;
+}
+
+.hero-primary__win-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #161b46;
+  margin-bottom: 2em;
 }
 
 .hero-primary__win-bar {
@@ -601,16 +608,169 @@ primary header icons end
 /*****************
    media queries
 ******************/
-@media (max-width: 700px) {
+@media (max-width: 1350px) {
+  .hero-primary {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 990px) {
   .hero-primary-container {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / span 4;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-primary {
+    padding: 1em;
   }
 }
 
 .hero-secondary-container {
   grid-column: 5 / -1;
+  padding-top: 1em;
+}
+
+.hero-secondary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.125em;
+}
+
+.hero-secondary__watch-container {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-secondary__cta {
+  background-color: #15be65;
+  border-radius: 8rem;
+  padding: 0.7em 1.5em;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 38%;
+  left: 24%;
+  gap: 0.4em;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.hero-secondary__text-container {
+  padding-top: 1em;
+  text-align: left;
+}
+
+.hero-secondary__heading {
+  font-size: 1.375rem;
+  color: #161b46;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+
+.hero-secondary__text {
+  color: #767379;
+  line-height: 1.5em;
+}
+
+/*****************
+   media queries
+******************/
+@media (max-width: 1200px) {
+  .hero-secondary__watch-container {
+    width: 80%;
+  }
+  .hero-secondary__text-container {
+    padding-top: 0.2em;
+  }
+  .hero-secondary__heading {
+    font-size: 2rem;
+    margin-bottom: 0.2em;
+  }
+  .hero-secondary__text {
+    font-size: 1.4rem;
+    line-height: 1.2em;
+  }
+  .hero-secondary__cta {
+    top: 40%;
+    left: 30%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .hero-secondary__heading {
+    font-size: 1.6rem;
+  }
+  .hero-secondary__text {
+    font-size: 1.2rem;
+    line-height: 1.3em;
+  }
+}
+
+@media (max-width: 990px) {
+  .hero-secondary-container {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / span 4;
+  }
+  .hero-secondary__heading {
+    font-size: 2rem;
+  }
+  .hero-secondary__text {
+    font-size: 1.4rem;
+  }
+  .hero-secondary__watch-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-secondary {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero-secondary__cta {
+    top: 40%;
+    left: 27%;
+    padding: 3% 6%;
+    font-size: 1.6rem;
+  }
+  .hero-secondary__image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-secondary__cta {
+    top: 40%;
+    left: 20%;
+    padding: 3% 6%;
+    font-size: 1.6rem;
+  }
 }
 
 .hero-container {
@@ -619,13 +779,172 @@ primary header icons end
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
   background-color: #fff;
-  padding: 1em;
-  margin-bottom: 1em;
-  border: 2px solid black;
+  padding: 1.5em;
+  margin-bottom: 1.75em;
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4/5;
   gap: 0.75rem;
+  border-radius: 0.6rem;
+}
+
+@media (max-width: 990px) {
+  .hero-container {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: auto 1fr;
+        grid-template-rows: auto 1fr;
+  }
+}
+
+.menu-container {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5/6;
+  border-radius: 0.6rem;
+  background-color: #fff;
+  margin-bottom: 1.3125em;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0.8em 1.3em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu--text {
+  font-size: 1.25rem;
+}
+
+.menu__item1 {
+  color: #161b46;
+  font-weight: 600;
+}
+
+.menu__item2 {
+  color: #635a6b;
+}
+
+.menu__item3 {
+  color: #8b8b8b;
+}
+
+.stats-team {
+  text-align: left;
+}
+
+.stats-team__team-text-0 {
+  position: relative;
+  left: 1.5em;
+}
+
+.stats-team__team-text-0::before {
+  content: url(../icons/liverpool.svg);
+  display: inline-block;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  position: absolute;
+  top: -90%;
+  left: -50%;
+}
+
+.stats-team__items {
+  padding: 0.8em;
+}
+
+.stats-team__items-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.stats-team__items-wrapper-0 .stats-team__info {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+  right: 0.5em;
+  width: 59%;
+}
+
+.stats-team__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 60%;
+}
+
+.stats-header-container {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  background-color: #fff;
+}
+
+.stats-header-container__header {
+  font-size: 1.375rem;
+  color: #161b46;
+  padding: 0.7em;
+  font-weight: 600;
+}
+
+.stats-team-primary-container {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / span 4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  background-color: #fff;
+}
+
+.stats-team-secondary-container {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / span 4;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  background-color: #fff;
+}
+
+.stats-player-container {
+  grid-column: 5 / -1;
+  grid-row: 1/-1;
+  background-color: #fff;
+}
+
+.stats-container {
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 1;
+  grid-row: 6/7;
+  border-radius: 0.6rem;
+  margin-bottom: 1.3125em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+  -webkit-column-gap: 0.75rem;
+          column-gap: 0.75rem;
+  row-gap: 1.125rem;
 }
 
 .App {
@@ -655,5 +974,9 @@ primary header icons end
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.bdr-radius {
+  border-radius: 0.6rem;
 }
 /*# sourceMappingURL=style.css.map */

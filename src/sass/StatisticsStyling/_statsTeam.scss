@@ -1,0 +1,43 @@
+.stats-team {
+   text-align: left;
+
+   //special logo
+   &__team-text-0 {
+      position: relative;
+      left: 1.5em;
+      &::before {
+         content: url(../icons/liverpool.svg);
+         display: inline-block;
+         transform: scale(0.5);
+         position: absolute;
+         top: -90%;
+         left: -50%;
+      }
+   }
+
+   &__items {
+      padding: 0.8em;
+   }
+
+   &__items-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   // alignmnet adjustment
+   &__items-wrapper-0 {
+      .stats-team__info {
+         justify-content: space-around;
+         position: relative;
+         right: 0.5em;
+         width: 59%;
+      }
+   }
+
+   &__info {
+      display: flex;
+      justify-content: space-around;
+      width: 60%;
+   }
+}
