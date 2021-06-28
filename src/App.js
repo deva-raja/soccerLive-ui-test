@@ -2,7 +2,6 @@ import './css/style.css';
 import LandingPage from './pages/LandingPage';
 
 // import { MdNavigateBefore } from 'react-icons';
-// import { AiFillCaretDown } from 'react-icons';
 
 
 // icons

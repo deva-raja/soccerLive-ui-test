@@ -835,16 +835,19 @@ primary header icons end
   color: #8b8b8b;
 }
 
-.stats-team {
-  text-align: left;
-}
-
-.stats-team__team-text-0 {
+/************************
+1.liverpool logo - not imp
+2.manutd logo - not imp
+3.real css 
+4.media queries
+**************************/
+.stats-team-primary-container .stats-team__team-text-0 {
   position: relative;
   left: 1.5em;
+  color: #161b46;
 }
 
-.stats-team__team-text-0::before {
+.stats-team-primary-container .stats-team__team-text-0::before {
   content: url(../icons/liverpool.svg);
   display: inline-block;
   -webkit-transform: scale(0.5);
@@ -854,8 +857,34 @@ primary header icons end
   left: -50%;
 }
 
+.stats-team-secondary-container .stats-team__team-text-0 {
+  position: relative;
+  left: 1.5em;
+  color: #161b46;
+}
+
+.stats-team-secondary-container .stats-team__team-text-0::before {
+  content: url(../icons/manutd.svg);
+  display: inline-block;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  position: absolute;
+  top: -90%;
+  left: -75%;
+}
+
+.stats-team {
+  text-align: left;
+}
+
 .stats-team__items {
   padding: 0.8em;
+  color: #3e3744;
+  font-weight: 600;
+}
+
+.stats-team__items:nth-child(even) {
+  background-color: #f6f6f6;
 }
 
 .stats-team__items-wrapper {
@@ -876,6 +905,7 @@ primary header icons end
   position: relative;
   right: 0.5em;
   width: 59%;
+  color: #635a6b;
 }
 
 .stats-team__info {
@@ -885,6 +915,22 @@ primary header icons end
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 60%;
+}
+
+@media (max-width: 1200px) {
+  .stats-team-primary-container .stats-team__team-text-0::before {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+    top: -130%;
+    left: -60%;
+  }
+  .stats-team-secondary-container .stats-team__team-text-0::before {
+    content: url(../icons/manutd.svg);
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+    top: -130%;
+    left: -95%;
+  }
 }
 
 .stats-header-container {
@@ -924,10 +970,176 @@ primary header icons end
   background-color: #fff;
 }
 
+/*******************
+   1.header
+   2.right side of header
+   3.next menu section
+   4.player details
+   5.players stats
+******************/
 .stats-player-container {
   grid-column: 5 / -1;
   grid-row: 1/-1;
   background-color: #fff;
+}
+
+.stats-player--spacing {
+  padding: 1.7em;
+}
+
+.stats-player--spacing--low {
+  padding: 0 1.7em;
+}
+
+.stats-player__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1.7em;
+}
+
+.stats-player__heading {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 1.375rem;
+  color: #161b46;
+}
+
+.stats-player__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.stats-player__heading-text {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #949292;
+}
+
+.stats-player__heading-button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 0.875rem;
+  background-color: #f6f6f6;
+  padding: 1em 1.7em;
+  border-radius: 2em;
+  margin-left: 1em;
+}
+
+.stats-player__button-text {
+  margin-right: 1em;
+}
+
+.stats-player__menu-container {
+  margin-bottom: 1.837em;
+}
+
+.stats-player__list-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2.5px solid #f2f2f2;
+  padding-bottom: 0.2em;
+}
+
+.stats-player__list-items {
+  color: #635a6b;
+  font-size: 1.1rem;
+}
+
+.stats-player__list-items:nth-child(1) {
+  color: #161b46;
+  position: relative;
+}
+
+.stats-player__list-items:nth-child(1):after {
+  content: '';
+  background: #161b46;
+  position: absolute;
+  display: inline-block;
+  width: 130%;
+  height: 3px;
+  top: 115%;
+  left: 0%;
+  border-radius: 0.8rem;
+}
+
+.stats-player .stats-player-details {
+  margin-bottom: 1em;
+}
+
+.stats-player .stats-player-details__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.stats-player .stats-player-details__items {
+  padding-left: 1.8em;
+  font-weight: 600;
+  color: #767379;
+}
+
+.stats-player .stats-player-details__items:nth-child(1) {
+  padding-left: 0;
+  padding-right: 1.5em;
+}
+
+.stats-player .stats-player-details__items:nth-child(2) {
+  padding-left: 0;
+  padding-right: 13em;
+}
+
+.stats-player .stats-player-records__items {
+  padding: 0.8em 0;
+  color: #3e3744;
+  font-weight: 600;
+}
+
+.stats-player .stats-player-records__items:nth-child(odd) {
+  background-color: #f6f6f6;
+}
+
+.stats-player .stats-player-records__items-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*******************
+   media queries
+******************/
+@media (max-width: 800px) {
+  .stats-player__list-container {
+    width: 75%;
+  }
 }
 
 .stats-container {

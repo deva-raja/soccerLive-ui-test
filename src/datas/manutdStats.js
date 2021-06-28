@@ -1,5 +1,5 @@
 const datas = [
-   ['Liverpool', 'Home', 'Away', 'All'],
+   ['Man Utd', 'Home', 'Away', 'All'],
    ['Games Played', '21', '10', '31'],
    ['Win', '21', '10', '31'],
    ['Draws', '21', '10', '31'],

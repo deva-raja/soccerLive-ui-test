@@ -1,22 +1,58 @@
+/************************
+1.liverpool logo - not imp
+2.manutd logo - not imp
+3.real css 
+4.media queries
+**************************/
+// 1.liverpool logo
+.stats-team-primary-container {
+   .stats-team {
+      &__team-text-0 {
+         position: relative;
+         left: 1.5em;
+         color: $bg-primary;
+         &::before {
+            content: url(../icons/liverpool.svg);
+            display: inline-block;
+            transform: scale(0.5);
+            position: absolute;
+            top: -90%;
+            left: -50%;
+         }
+      }
+   }
+}
+
+// 2.manutd logo
+.stats-team-secondary-container {
+   .stats-team {
+      &__team-text-0 {
+         position: relative;
+         left: 1.5em;
+         color: $bg-primary;
+         &::before {
+            content: url(../icons/manutd.svg);
+            display: inline-block;
+            transform: scale(0.5);
+            position: absolute;
+            top: -90%;
+            left: -75%;
+         }
+      }
+   }
+}
+
+// 3.real css
 .stats-team {
    text-align: left;
 
-   //special logo
-   &__team-text-0 {
-      position: relative;
-      left: 1.5em;
-      &::before {
-         content: url(../icons/liverpool.svg);
-         display: inline-block;
-         transform: scale(0.5);
-         position: absolute;
-         top: -90%;
-         left: -50%;
-      }
-   }
-
    &__items {
       padding: 0.8em;
+      color: $text-teritiary;
+      font-weight: 600;
+      &:nth-child(even) {
+         background-color: $bg-secondary;
+      }
    }
 
    &__items-wrapper {
@@ -32,6 +68,7 @@
          position: relative;
          right: 0.5em;
          width: 59%;
+         color: $text-primary;
       }
    }
 
@@ -39,5 +76,32 @@
       display: flex;
       justify-content: space-around;
       width: 60%;
+   }
+}
+
+// 4.media queries
+@media (max-width: '1200px') {
+   .stats-team-primary-container {
+      .stats-team {
+         &__team-text-0 {
+            &::before {
+               transform: scale(0.3);
+               top: -130%;
+               left: -60%;
+            }
+         }
+      }
+   }
+   .stats-team-secondary-container {
+      .stats-team {
+         &__team-text-0 {
+            &::before {
+               content: url(../icons/manutd.svg);
+               transform: scale(0.3);
+               top: -130%;
+               left: -95%;
+            }
+         }
+      }
    }
 }

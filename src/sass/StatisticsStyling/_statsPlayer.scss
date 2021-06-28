@@ -1,5 +1,141 @@
+/*******************
+   1.header
+   2.right side of header
+   3.next menu section
+   4.player details
+   5.players stats
+******************/
 .stats-player-container {
    grid-column: 5 / -1;
    grid-row: 1/-1;
    background-color: $white;
+}
+
+.stats-player {
+   &--spacing {
+      padding: 1.7em;
+   }
+   &--spacing--low {
+      padding: 0 1.7em;
+   }
+
+   // 1.header
+   &__header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.7em;
+   }
+   &__heading {
+      align-self: flex-start;
+      font-size: 1.375rem;
+      color: $bg-primary;
+   }
+
+   // 2.right side of header
+   &__right {
+      display: flex;
+      justify-content: space-between;
+   }
+   &__heading-text {
+      align-self: center;
+      color: $text-light;
+   }
+   &__heading-button {
+      align-self: flex-end;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.875rem;
+      background-color: $bg-secondary;
+      padding: 1em 1.7em;
+      border-radius: 2em;
+      margin-left: 1em;
+   }
+   &__button-text {
+      margin-right: 1em;
+   }
+
+   // 3.next menu section
+   &__menu-container {
+      margin-bottom: 1.837em;
+   }
+
+   &__list-container {
+      display: flex;
+      width: 60%;
+      justify-content: space-between;
+      border-bottom: 2.5px solid $light-grey;
+      padding-bottom: 0.2em;
+   }
+
+   &__list-items {
+      color: $text-primary;
+      font-size: 1.1rem;
+      &:nth-child(1) {
+         color: $bg-primary;
+         position: relative;
+         &:after {
+            content: '';
+            background: $bg-primary;
+            position: absolute;
+            display: inline-block;
+            width: 130%;
+            height: 3px;
+            top: 115%;
+            left: 0%;
+            border-radius: 0.8rem;
+         }
+      }
+   }
+
+   // 4.player details
+   .stats-player-details {
+      margin-bottom: 1em;
+      &__list {
+         display: flex;
+      }
+      &__items {
+         & {
+            padding-left: 1.8em;
+            font-weight: 600;
+            color: $text-secondary;
+         }
+         &:nth-child(1) {
+            padding-left: 0;
+            padding-right: 1.5em;
+         }
+         &:nth-child(2) {
+            padding-left: 0;
+            padding-right: 13em;
+         }
+      }
+   }
+
+   // 5.players stats
+   .stats-player-records {
+      &__items {
+         padding: 0.8em 0;
+         color: $text-teritiary;
+         font-weight: 600;
+         &:nth-child(odd) {
+            background-color: $bg-secondary;
+         }
+      }
+      &__items-wrapper {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+   }
+}
+
+/*******************
+   media queries
+******************/
+@media (max-width: '800px') {
+   .stats-player {
+      &__list-container {
+         width: 75%;
+      }
+   }
 }
