@@ -1,0 +1,26 @@
+.footer-avatar {
+   display: flex;
+   gap: 0.5rem;
+   &__icon-container {
+      background-color: $bg-secondary;
+      border-radius: 50%;
+      width: 2.5em;
+      height: 2.5em;
+      padding: 0.5em 0.7em;
+   }
+   &__heading {
+      font-size: 0.875rem;
+      color: $text-primary;
+      margin-bottom: 0.4rem;
+   }
+   &__text {
+      font-weight: 600;
+      color: $text-primary;
+   }
+   @media (max-width: '1200px') {
+      gap: 1rem;
+   }
+   @media (max-width: '850px') {
+      gap: 2rem;
+   }
+}

@@ -1,6 +1,7 @@
 @import 'footerPrimay';
 @import 'footerSecondary';
 @import 'resultCard';
+@import 'footerAvatar';
 
 .footer-container {
    grid-row: 8/9;
@@ -8,4 +9,11 @@
    grid-template-columns: repeat(12, 1fr);
    margin-bottom: 3em;
    column-gap: 0.75rem;
+}
+
+@media (max-width: '880px') {
+   .footer-container {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, auto);
+   }
 }
