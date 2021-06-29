@@ -211,6 +211,21 @@
    html {
       font-size: 12px;
    }
+   .stats-player {
+      .stats-player-records {
+         &__name-wrapper {
+            width: 18%;
+         }
+         // mancity icons
+         &_name {
+            &::before {
+               transform: scale(0.8);
+               top: -55%;
+               left: -50%;
+            }
+         }
+      }
+   }
 }
 @media (max-width: '1100px') {
    .stats-player {
@@ -229,6 +244,9 @@
 }
 
 @media (max-width: '990px') {
+   html {
+      font-size: 10px;
+   }
    .stats-player-container {
       grid-column: 1 / -1;
       grid-row: 4/5;
@@ -252,6 +270,65 @@
             &:nth-child(2) {
                padding-left: 0;
                padding-right: 13em;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: '990px') {
+   .stats-player {
+      & > * {
+         font-size: 0.5rem;
+      }
+   }
+}
+
+@media (max-width: '660px') {
+   .stats-player {
+      & > * {
+         font-size: 0.3rem;
+      }
+      &__list-items {
+         font-size: 8px;
+      }
+      .stats-player-details {
+         &__items {
+            & {
+               padding-left: 1em;
+               font-weight: 600;
+               color: $text-secondary;
+               font-size: 6px;
+            }
+            &:nth-child(1) {
+               padding-left: 0;
+               padding-right: 1em;
+            }
+            &:nth-child(2) {
+               padding-left: 0;
+               padding-right: 10em;
+            }
+         }
+      }
+
+      .stats-player-records {
+         & > * {
+            font-size: 0.8rem;
+         }
+         &__items {
+            padding: 0.15em 0.1em;
+         }
+
+         &__name-wrapper {
+            width: 25%;
+         }
+
+         // mancity icons
+         &_name {
+            &::before {
+               transform: scale(0.3);
+               top: -55%;
+               left: -40%;
             }
          }
       }

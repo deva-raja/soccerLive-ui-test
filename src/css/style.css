@@ -97,13 +97,45 @@ primary header icons end
   color: #635a6b;
 }
 
+/*****************************
+   hero header icons end
+*****************************/
+/*****************************
+   head to head icons start
+*****************************/
+.icon--small {
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.icon--medium {
+  width: 2em;
+  height: 2em;
+}
+
+/*****************************
+   head to head icons end
+*****************************/
+/*****************************
+   footer section start
+*****************************/
+.footer-primary__icon--next {
+  width: 1.7em;
+  height: 1.7em;
+}
+
+.footer-primary__icon--previous {
+  width: 1.7em;
+  height: 1.7em;
+}
+
 .landing-page {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: repeat 12, 1fr;
       grid-template-columns: repeat 12, 1fr;
-  -ms-grid-rows: repeat 10, auto;
-      grid-template-rows: repeat 10, auto;
+  -ms-grid-rows: repeat 8, auto;
+      grid-template-rows: repeat 8, auto;
   -webkit-column-gap: 12px;
           column-gap: 12px;
 }
@@ -389,17 +421,6 @@ primary header icons end
 .secondary-header-container--active .secondary-header__items:nth-child(1) {
   position: relative;
   color: #161b46;
-}
-
-.secondary-header-container--active .secondary-header__items:nth-child(1)::before {
-  content: '';
-  position: absolute;
-  background: #161b46;
-  height: 0.35rem;
-  width: 100vw;
-  border-radius: 1em;
-  right: -6.8em;
-  top: 1.5em;
 }
 
 /*************************
@@ -1269,6 +1290,15 @@ primary header icons end
   html {
     font-size: 12px;
   }
+  .stats-player .stats-player-records__name-wrapper {
+    width: 18%;
+  }
+  .stats-player .stats-player-records_name::before {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    top: -55%;
+    left: -50%;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -1282,6 +1312,9 @@ primary header icons end
 }
 
 @media (max-width: 990px) {
+  html {
+    font-size: 10px;
+  }
   .stats-player-container {
     grid-column: 1 / -1;
     -ms-grid-row: 4;
@@ -1311,6 +1344,50 @@ primary header icons end
   }
 }
 
+@media (max-width: 990px) {
+  .stats-player > * {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .stats-player > * {
+    font-size: 0.3rem;
+  }
+  .stats-player__list-items {
+    font-size: 8px;
+  }
+  .stats-player .stats-player-details__items {
+    padding-left: 1em;
+    font-weight: 600;
+    color: #767379;
+    font-size: 6px;
+  }
+  .stats-player .stats-player-details__items:nth-child(1) {
+    padding-left: 0;
+    padding-right: 1em;
+  }
+  .stats-player .stats-player-details__items:nth-child(2) {
+    padding-left: 0;
+    padding-right: 10em;
+  }
+  .stats-player .stats-player-records > * {
+    font-size: 0.8rem;
+  }
+  .stats-player .stats-player-records__items {
+    padding: 0.15em 0.1em;
+  }
+  .stats-player .stats-player-records__name-wrapper {
+    width: 25%;
+  }
+  .stats-player .stats-player-records_name::before {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+    top: -55%;
+    left: -40%;
+  }
+}
+
 .stats-container {
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;
@@ -1335,6 +1412,246 @@ primary header icons end
     -ms-grid-rows: (auto)[4];
         grid-template-rows: repeat(4, auto);
   }
+}
+
+.h-to-h .result-card {
+  background-color: #f6f6f6;
+}
+
+.h-to-h .result-card__result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  padding: 1em 1.7em;
+  color: #3e3744;
+  font-size: 1.2rem;
+  gap: 0.3em;
+}
+
+.h-to-h .result-card__result::before {
+  content: '14/07/21';
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #161b46;
+  left: 0;
+  bottom: 5.7rem;
+}
+
+.h-to-h .result-card__show-result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.3em;
+}
+
+.h-to-h .result-card__ft {
+  color: #949292;
+}
+
+.h-to-h .result-card__result--heading {
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+
+.h-to-h-container {
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 1;
+  grid-row: 7/8;
+  background-color: #fff;
+  margin-bottom: 1.75em;
+}
+
+.h-to-h {
+  padding: 2em 2em;
+}
+
+.h-to-h__heading {
+  color: #161b46;
+  font-size: 1.375rem;
+  margin-bottom: 2.6em;
+}
+
+.h-to-h__card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 4em;
+}
+
+.h-to-h__card-container + .h-to-h__card-container {
+  margin-bottom: 1em;
+}
+
+@media (max-width: 900px) {
+  .h-to-h__card-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 3.5em;
+  }
+}
+
+@media (max-width: 1500px) {
+  .h-to-h__card-container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.footer-primary {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / span 4;
+  padding: 1em 0;
+  background-color: #161b46;
+  width: 97%;
+  color: #fff;
+}
+
+.footer-primary__button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-primary__btn--previous {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1e2352;
+  border-radius: 3em;
+  padding: 0.3em 0.6em;
+}
+
+.footer-primary__btn--next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1e2352;
+  border-radius: 3em;
+  padding: 0.3em 0.6em;
+}
+
+.footer-primary__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em 2em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-primary__date {
+  margin: 0 0 1em;
+  background-color: #1e2352;
+  padding: 1em 2em;
+  margin-bottom: 2em;
+}
+
+.footer-primary__card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.footer-secondary {
+  grid-column: 5 / -1;
+  background-color: #fff;
+}
+
+.footer-primary .result-card {
+  background-color: #fff;
+  width: 88%;
+}
+
+.footer-primary .result-card__result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  padding: 1em 2em;
+  gap: 0.5em;
+  color: #3e3744;
+  font-size: 1rem;
+}
+
+.footer-primary .result-card__show-result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.3em;
+}
+
+.footer-primary .result-card__ft {
+  color: #949292;
+}
+
+.footer-primary .result-card__result--heading {
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+
+.footer-container {
+  -ms-grid-row: 8;
+  -ms-grid-row-span: 1;
+  grid-row: 8/9;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 3em;
+  -webkit-column-gap: 0.75rem;
+          column-gap: 0.75rem;
 }
 
 .App {

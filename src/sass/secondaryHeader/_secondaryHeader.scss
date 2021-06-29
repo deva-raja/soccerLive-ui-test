@@ -72,16 +72,6 @@
          &:nth-child(1) {
             position: relative;
             color: $bg-primary;
-            &::before {
-               content: '';
-               position: absolute;
-               background: $bg-primary;
-               height: 0.35rem;
-               width: 100vw;
-               border-radius: 1em;
-               right: -6.8em;
-               top: 1.5em;
-            }
          }
       }
    }

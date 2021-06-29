@@ -8,7 +8,6 @@ import StatsPlayerStatsListComponent from './utils/StatsPlayerStatsListComponent
 import { MdNavigateBefore } from 'react-icons/md';
 
 function StatsPlayerComponent() {
-   console.log(playerStats);
    return (
       <div className='stats-player-container bdr-radius'>
          <div className='stats-player'>

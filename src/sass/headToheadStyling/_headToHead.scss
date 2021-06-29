@@ -1,0 +1,41 @@
+@import 'resultCard';
+
+.h-to-h-container {
+   grid-row: 7/8;
+   background-color: $white;
+   margin-bottom: 1.75em;
+}
+.h-to-h {
+   padding: 2em 2em;
+   &__heading {
+      color: $bg-primary;
+      font-size: 1.375rem;
+      margin-bottom: 2.6em;
+   }
+   &__card-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4em;
+   }
+}
+
+.h-to-h__card-container + .h-to-h__card-container {
+   margin-bottom: 1em;
+}
+
+@media (max-width: '900px') {
+   .h-to-h {
+      &__card-container {
+         flex-direction: column;
+         gap: 3.5em;
+      }
+   }
+}
+
+@media (max-width: '1500px') {
+   .h-to-h {
+      &__card-container {
+         justify-content: space-around;
+      }
+   }
+}
