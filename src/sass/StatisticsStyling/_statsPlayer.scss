@@ -4,6 +4,7 @@
    3.next menu section
    4.player details
    5.players stats
+   6.pagination 
 ******************/
 .stats-player-container {
    grid-column: 5 / -1;
@@ -13,17 +14,16 @@
 
 .stats-player {
    &--spacing {
-      padding: 1.7em;
+      padding: 1em;
    }
    &--spacing--low {
-      padding: 0 1.7em;
+      padding: 0 1em;
    }
 
    // 1.header
    &__header {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 1.7em;
    }
    &__heading {
       align-self: flex-start;
@@ -57,7 +57,7 @@
 
    // 3.next menu section
    &__menu-container {
-      margin-bottom: 1.837em;
+      margin-bottom: 1em;
    }
 
    &__list-container {
@@ -96,7 +96,7 @@
       }
       &__items {
          & {
-            padding-left: 1.8em;
+            padding-left: 1.9em;
             font-weight: 600;
             color: $text-secondary;
          }
@@ -114,17 +114,92 @@
    // 5.players stats
    .stats-player-records {
       &__items {
-         padding: 0.8em 0;
+         padding: 0.25em 0.2em;
          color: $text-teritiary;
          font-weight: 600;
+         & > * {
+            font-size: 0.8rem;
+         }
          &:nth-child(odd) {
             background-color: $bg-secondary;
          }
       }
       &__items-wrapper {
          display: flex;
-         justify-content: space-between;
          align-items: center;
+         justify-content: space-between;
+      }
+      &__info {
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         position: relative;
+         width: 66%;
+         color: $text-primary;
+      }
+
+      &__name-wrapper {
+         display: flex;
+         padding-right: 1em;
+         align-items: center;
+         justify-content: space-between;
+         width: 17%;
+      }
+
+      &__no {
+         margin-right: 13em;
+      }
+
+      // mancity icons
+      &_name {
+         position: relative;
+         &::before {
+            content: url(../icons/mancity.svg);
+            transform: scale(0.7);
+
+            position: absolute;
+            display: block;
+            top: -30%;
+            left: -30%;
+         }
+      }
+
+      &__ratings {
+         background-color: $light-green;
+         color: $dark-green;
+         padding: 0.7em 1em;
+         border-radius: 0.8em;
+      }
+   }
+
+   // 6.pagination
+   &__pagination {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 1em 5em;
+      & > * {
+         margin-left: 1em;
+      }
+      &--primary {
+         background-color: $bg-primary;
+         width: 1.5rem;
+         height: 1.5rem;
+         border-radius: 50%;
+         color: $white;
+         padding: 0.25em 0.38em;
+         text-align: center;
+         font-size: 0.8rem;
+      }
+      &--secondary {
+         background-color: $bg-secondary;
+         border-radius: 50%;
+         color: $text-primary;
+         width: 1.5rem;
+         height: 1.5rem;
+         padding: 0.25em 0.38em;
+         text-align: center;
+         font-size: 0.8rem;
       }
    }
 }
@@ -132,10 +207,53 @@
 /*******************
    media queries
 ******************/
-@media (max-width: '800px') {
+@media (max-width: '1500px') {
+   html {
+      font-size: 12px;
+   }
+}
+@media (max-width: '1100px') {
    .stats-player {
-      &__list-container {
-         width: 75%;
+      .stats-player-details {
+         &__items {
+            & {
+               font-size: 0.75rem;
+               padding-left: 3em;
+            }
+            &:nth-child(1) {
+               padding-right: 4em;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: '990px') {
+   .stats-player-container {
+      grid-column: 1 / -1;
+      grid-row: 4/5;
+   }
+   .stats-player {
+      .stats-player-details {
+         margin-bottom: 1em;
+         &__list {
+            display: flex;
+         }
+         &__items {
+            & {
+               padding-left: 1.9em;
+               font-weight: 600;
+               color: $text-secondary;
+            }
+            &:nth-child(1) {
+               padding-left: 0;
+               padding-right: 1.5em;
+            }
+            &:nth-child(2) {
+               padding-left: 0;
+               padding-right: 13em;
+            }
+         }
       }
    }
 }

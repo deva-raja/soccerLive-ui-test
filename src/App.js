@@ -1,7 +1,6 @@
 import './css/style.css';
 import LandingPage from './pages/LandingPage';
 
-// import { MdNavigateBefore } from 'react-icons';
 
 
 // icons

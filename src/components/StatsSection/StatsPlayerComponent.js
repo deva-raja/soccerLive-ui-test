@@ -5,6 +5,7 @@ import playerDetails from '../../datas/playerDetailsArray';
 import playerStats from '../../datas/playerStats';
 import StatsPlayerDetailsListComponent from './utils/StatsPlayerDetailsListComponent';
 import StatsPlayerStatsListComponent from './utils/StatsPlayerStatsListComponent';
+import { MdNavigateBefore } from 'react-icons/md';
 
 function StatsPlayerComponent() {
    console.log(playerStats);
@@ -39,6 +40,13 @@ function StatsPlayerComponent() {
 
             {/* List of Player details */}
             <StatsPlayerStatsListComponent datas={playerStats} />
+
+            {/* Last button section */}
+            <div className='stats-player__pagination'>
+               <MdNavigateBefore className='navigate-before-icon' />
+               <p className='stats-player__pagination--primary'>1</p>
+               <p className='stats-player__pagination--secondary'>2</p>
+            </div>
          </div>
       </div>
    );

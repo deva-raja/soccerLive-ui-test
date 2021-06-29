@@ -9,3 +9,10 @@
       font-weight: 600;
    }
 }
+
+@media (max-width: '990px') {
+   .stats-header-container {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+   }
+}

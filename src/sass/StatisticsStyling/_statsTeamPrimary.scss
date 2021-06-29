@@ -3,3 +3,10 @@
    grid-row: 2/3;
    background-color: $white;
 }
+
+@media (max-width: '990px') {
+   .stats-team-primary-container {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+   }
+}

@@ -91,6 +91,12 @@ primary header icons end
   height: 1.2em;
 }
 
+.navigate-before-icon {
+  width: 1.2em;
+  height: 1.2em;
+  color: #635a6b;
+}
+
 .landing-page {
   display: -ms-grid;
   display: grid;
@@ -950,6 +956,15 @@ primary header icons end
   font-weight: 600;
 }
 
+@media (max-width: 990px) {
+  .stats-header-container {
+    grid-column: 1 / -1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+}
+
 .stats-team-primary-container {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
@@ -958,6 +973,15 @@ primary header icons end
   -ms-grid-row-span: 1;
   grid-row: 2/3;
   background-color: #fff;
+}
+
+@media (max-width: 990px) {
+  .stats-team-primary-container {
+    grid-column: 1 / -1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
 }
 
 .stats-team-secondary-container {
@@ -970,12 +994,22 @@ primary header icons end
   background-color: #fff;
 }
 
+@media (max-width: 990px) {
+  .stats-team-secondary-container {
+    grid-column: 1 / -1;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+}
+
 /*******************
    1.header
    2.right side of header
    3.next menu section
    4.player details
    5.players stats
+   6.pagination 
 ******************/
 .stats-player-container {
   grid-column: 5 / -1;
@@ -984,11 +1018,11 @@ primary header icons end
 }
 
 .stats-player--spacing {
-  padding: 1.7em;
+  padding: 1em;
 }
 
 .stats-player--spacing--low {
-  padding: 0 1.7em;
+  padding: 0 1em;
 }
 
 .stats-player__header {
@@ -998,7 +1032,6 @@ primary header icons end
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 1.7em;
 }
 
 .stats-player__heading {
@@ -1048,7 +1081,7 @@ primary header icons end
 }
 
 .stats-player__menu-container {
-  margin-bottom: 1.837em;
+  margin-bottom: 1em;
 }
 
 .stats-player__list-container {
@@ -1096,7 +1129,7 @@ primary header icons end
 }
 
 .stats-player .stats-player-details__items {
-  padding-left: 1.8em;
+  padding-left: 1.9em;
   font-weight: 600;
   color: #767379;
 }
@@ -1112,9 +1145,13 @@ primary header icons end
 }
 
 .stats-player .stats-player-records__items {
-  padding: 0.8em 0;
+  padding: 0.25em 0.2em;
   color: #3e3744;
   font-weight: 600;
+}
+
+.stats-player .stats-player-records__items > * {
+  font-size: 0.8rem;
 }
 
 .stats-player .stats-player-records__items:nth-child(odd) {
@@ -1125,20 +1162,152 @@ primary header icons end
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.stats-player .stats-player-records__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 66%;
+  color: #635a6b;
+}
+
+.stats-player .stats-player-records__name-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 17%;
+}
+
+.stats-player .stats-player-records__no {
+  margin-right: 13em;
+}
+
+.stats-player .stats-player-records_name {
+  position: relative;
+}
+
+.stats-player .stats-player-records_name::before {
+  content: url(../icons/mancity.svg);
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  position: absolute;
+  display: block;
+  top: -30%;
+  left: -30%;
+}
+
+.stats-player .stats-player-records__ratings {
+  background-color: #e9fff3;
+  color: #15be65;
+  padding: 0.7em 1em;
+  border-radius: 0.8em;
+}
+
+.stats-player__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em 5em;
+}
+
+.stats-player__pagination > * {
+  margin-left: 1em;
+}
+
+.stats-player__pagination--primary {
+  background-color: #161b46;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  color: #fff;
+  padding: 0.25em 0.38em;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.stats-player__pagination--secondary {
+  background-color: #f6f6f6;
+  border-radius: 50%;
+  color: #635a6b;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.25em 0.38em;
+  text-align: center;
+  font-size: 0.8rem;
 }
 
 /*******************
    media queries
 ******************/
-@media (max-width: 800px) {
-  .stats-player__list-container {
-    width: 75%;
+@media (max-width: 1500px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .stats-player .stats-player-details__items {
+    font-size: 0.75rem;
+    padding-left: 3em;
+  }
+  .stats-player .stats-player-details__items:nth-child(1) {
+    padding-right: 4em;
+  }
+}
+
+@media (max-width: 990px) {
+  .stats-player-container {
+    grid-column: 1 / -1;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  .stats-player .stats-player-details {
+    margin-bottom: 1em;
+  }
+  .stats-player .stats-player-details__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .stats-player .stats-player-details__items {
+    padding-left: 1.9em;
+    font-weight: 600;
+    color: #767379;
+  }
+  .stats-player .stats-player-details__items:nth-child(1) {
+    padding-left: 0;
+    padding-right: 1.5em;
+  }
+  .stats-player .stats-player-details__items:nth-child(2) {
+    padding-left: 0;
+    padding-right: 13em;
   }
 }
 
@@ -1157,6 +1326,15 @@ primary header icons end
   -webkit-column-gap: 0.75rem;
           column-gap: 0.75rem;
   row-gap: 1.125rem;
+}
+
+@media (max-width: 990px) {
+  .stats-container {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: (auto)[4];
+        grid-template-rows: repeat(4, auto);
+  }
 }
 
 .App {
